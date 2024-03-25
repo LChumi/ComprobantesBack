@@ -9,10 +9,13 @@
 package com.cumple.comprobantes.services;
 
 import com.cumple.comprobantes.model.entity.Comprobante;
+import com.cumple.comprobantes.model.entity.Empresa;
 import com.cumple.comprobantes.repository.ComprobanteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class ComprobanteServiceImpl extends GenericServiceImpl<Comprobante, Long> implements ComprobanteService{
@@ -23,5 +26,10 @@ public class ComprobanteServiceImpl extends GenericServiceImpl<Comprobante, Long
     @Override
     public CrudRepository<Comprobante, Long> getDao() {
         return comprobanteRepository;
+    }
+
+    @Override
+    public List<Comprobante> porEmpresa(Empresa empresa) {
+        return comprobanteRepository.findByEmpresa(empresa);
     }
 }

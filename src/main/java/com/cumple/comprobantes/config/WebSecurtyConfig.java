@@ -37,6 +37,7 @@ public class WebSecurtyConfig extends WebSecurityConfigurerAdapter {
                         .antMatchers("/auth/**").permitAll()
                         .antMatchers("/empresa/**").hasRole("ADMIN")
                         .antMatchers("/usuario/**").hasRole("SUPER")
+                        .antMatchers("/swagger-ui.html", "/swagger-ui/**", "/v2/api-docs", "/webjars/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .cors(Customizer.withDefaults())

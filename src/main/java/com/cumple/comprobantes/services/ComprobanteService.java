@@ -9,6 +9,11 @@
 package com.cumple.comprobantes.services;
 
 import com.cumple.comprobantes.model.entity.Comprobante;
+import com.cumple.comprobantes.model.entity.Empresa;
+
+import java.util.List;
 
 public interface ComprobanteService extends GenericService<Comprobante,Long> {
+
+    List<Comprobante> porEmpresa(Empresa empresa);
 }

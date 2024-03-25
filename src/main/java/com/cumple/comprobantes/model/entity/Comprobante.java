@@ -1,6 +1,8 @@
 package com.cumple.comprobantes.model.entity;
 
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -18,6 +20,7 @@ public class Comprobante implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Setter(AccessLevel.NONE)
     @Column(name = "comp_codigo")
     private Long codigo;
 
@@ -64,6 +67,9 @@ public class Comprobante implements Serializable {
 
     @Column(name = "comp_numero")
     public int numero;
+
+    @Column(name = "comp_caracter")
+    public String caracter;
 
     @ManyToOne
     @JoinColumn(name = "comp_empresa",referencedColumnName = "emp_codigo")

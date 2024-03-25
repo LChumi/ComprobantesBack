@@ -1,7 +1,9 @@
 package com.cumple.comprobantes.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -18,6 +20,7 @@ public class Estado implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "est_codigo")
+    @Setter(AccessLevel.NONE)
     private Long codigo;
 
     @Column(name = "est_id")

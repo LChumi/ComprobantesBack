@@ -1,6 +1,8 @@
 package com.cumple.comprobantes.model.entity;
 
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -13,6 +15,7 @@ public class UsuarioEmpresa implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "usr_empr_codigo")
+    @Setter(AccessLevel.NONE)
     private Long usrEmprCodigo;
 
     @ManyToOne

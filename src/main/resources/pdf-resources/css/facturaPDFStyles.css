@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.column {
+    width: 49%;
+    flex-grow: 1;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo según tus necesidades */
+}
+.invoice-info,
+.company-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.invoice-info p,
+.company-info p {
+    margin: 5px 0;
+}
