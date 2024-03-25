@@ -70,6 +70,29 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
 		</dependency>
+		<!-- Dependencia thymeleaft -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nz.net.ultraq.thymeleaf</groupId>
+			<artifactId>thymeleaf-layout-dialect</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<!-- dependencias PDF -->
+		<dependency>
+			<groupId>org.xhtmlrenderer</groupId>
+			<artifactId>flying-saucer-pdf</artifactId>
+			<version>9.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.jtidy</groupId>
+			<artifactId>jtidy</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+
+
 
 	</dependencies>
 
